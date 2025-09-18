@@ -7,7 +7,7 @@ public class Hashing {
 
         int sum = 0;
 
-        for(int i = 0; i < s.length(); i++) {
+        for(int i = 0; i < l; i++) {
             sum += (s.charAt(i) - 'a' + 1) * Math.pow(31, i);
         }
         System.out.println(sum);
