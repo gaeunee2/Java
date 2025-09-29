@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class 버블정렬1 {
+public class 버블정렬2 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -17,14 +17,14 @@ public class 버블정렬1 {
             A[i] = Integer.parseInt(st.nextToken());
         }
 
-        if (!printKthSwap(A, k)) {
+        if (!printKthArray(A, k)) {
             System.out.println(-1);
         }
 
         br.close();
     }
 
-    private static boolean printKthSwap(int[] A, int k) {
+    private static boolean printKthArray(int[] A, int k) {
         int count = 0;
         for (int i = 0; i < A.length - 1; i++) {
             boolean swapped = false;
@@ -37,7 +37,9 @@ public class 버블정렬1 {
 
                     count += 1;
                     if (count == k) {
-                        System.out.println(A[j] + " " + A[j + 1]);
+                        for (int x : A) {
+                            System.out.print(x + " ");
+                        }
                         return true;
                     }
                     swapped = true;
