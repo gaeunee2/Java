@@ -17,7 +17,6 @@ public class 삽입정렬1 {
             A[i] = Integer.parseInt(st.nextToken());
         }
 
-
         if (!printKthSwap(A, k)) {
             System.out.println(-1);
         }
